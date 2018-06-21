@@ -3,19 +3,19 @@
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 var allLocations = [];
-var totalCookiesByHour = 0;
+var stotalCookiesByHour = 0;
 var netTotal = 0;
 
 function MakeLocation(name, minCustPerHour, maxCustPerHour, avgCookiesSoldPerHour) {
-    this.name = name;
-    this.minCustPerHour = minCustPerHour;
-    this.maxCustPerHour = maxCustPerHour;
-    this.avgCookiesSoldPerHour = avgCookiesSoldPerHour;
-    //these are the questions we need to solve
-    this.randCustByHour = [];
-    this.randCookiesSoldByHour = [];
-    this.totalCookies = 0;
-    allLocations.push(this);
+  this.name = name;
+  this.minCustPerHour = minCustPerHour;
+  this.maxCustPerHour = maxCustPerHour;
+  this.avgCookiesSoldPerHour = avgCookiesSoldPerHour;
+  //these are the questions we need to solve
+  this.randCustByHour = [];
+  this.randCookiesSoldByHour = [];
+  this.totalCookies = 0;
+  allLocations.push(this);
 }
 //use the MakeLocation.prototype to calc random customers per hour
 MakeLocation.prototype.calcRanCustByHour = function () {
